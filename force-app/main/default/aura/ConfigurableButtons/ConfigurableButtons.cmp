@@ -1,3 +1,12 @@
-<aura:component>
-    Hello World
+<aura:component controller="ConfigurableButtonsController" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="button01_config" type="object" />
+    <aura:attribute name="button01_mdt" type="string" />
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <lightning:buttonGroup>
+                <lightning:button label="Button 1" />
+                <lightning:button label="Button 2" />
+            </lightning:buttonGroup>
+        </div>
+    </article>
 </aura:component>	
