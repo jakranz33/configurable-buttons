@@ -1,7 +1,10 @@
 {
     "orgName": "jeffrey.kranz Company",
     "edition": "Developer",
-    "orgPreferences" : {
-        "enabled": ["S1DesktopEnabled"]
+    "features": ["AddCustomApps:30","AddCustomTabs:30"],
+    "settings": {
+        "orgPreferenceSettings" : {
+            "s1DesktopEnabled": true
+        }
     }
 }
