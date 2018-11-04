@@ -11,7 +11,6 @@
             if (state === "SUCCESS") {
                 console.log(response.getReturnValue());
                 component.set("v.button01_mdt", response.getReturnValue());
-                component.set(component.find("button01").label,)
             } else if (state === "ERROR") {
                 var errors = response.getError();
                 if (errors) {

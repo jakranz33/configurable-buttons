@@ -29,6 +29,10 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
+            <componentInstanceProperties>
+                <name>button01_mdt_name</name>
+                <value>My_Button</value>
+            </componentInstanceProperties>
             <componentName>ConfigurableButtons</componentName>
         </componentInstances>
         <mode>Replace</mode>
