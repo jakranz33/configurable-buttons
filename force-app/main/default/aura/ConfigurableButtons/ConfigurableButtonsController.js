@@ -1,10 +1,30 @@
 ({
     doInit : function(component, event, helper) {
-        var action = component.get("c.getButtonConfigLabel");
+        var action = component.get("c.getButtonConfig");
+
         action.setParams({
-            configName : 'My Button'
+            configName : component.get("v.button01_mdt_name")
         });
         
-        component.get("v.button01_mdt");
+        action.setCallback(this, function(response){
+            var state = response.getState();
+            if (state === "SUCCESS") {
+                console.log(response.getReturnValue());
+                component.set("v.button01_mdt", response.getReturnValue());
+                component.set(component.find("button01").label,)
+            } else if (state === "ERROR") {
+                var errors = response.getError();
+                if (errors) {
+                    if (errors[0] && errors[0].message) {
+                        console.log("Error message: " + 
+                                 errors[0].message);
+                    }
+                } else {
+                    console.log("Unknown error");
+                }
+            }
+        });
+
+        $A.enqueueAction(action);
     }
 })

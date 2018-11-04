@@ -1,11 +1,15 @@
-<aura:component controller="ConfigurableButtonsController" implements="flexipage:availableForAllPageTypes">
-    <aura:attribute name="button01_config" type="object" />
-    <aura:attribute name="button01_mdt" type="string" />
+<aura:component controller="ConfigurableButtons_Controller" implements="flexipage:availableForAllPageTypes">
+    <aura:attribute name="button01_mdt" type="Map" />
+    <aura:attribute name="button01_mdt_name" type="string" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
     <article class="slds-card">
         <div class="slds-card__header slds-grid">
             <lightning:buttonGroup>
-                <lightning:button label="Button 1" />
-                <lightning:button label="Button 2" />
+                <aura:if isTrue="{!not(empty(v.button01_mdt))}">
+                    <lightning:button aura:id="button_01" label="{!button01_mdt_name}" />
+                </aura:if>
             </lightning:buttonGroup>
         </div>
     </article>
