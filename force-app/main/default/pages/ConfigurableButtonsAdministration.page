@@ -1,0 +1,91 @@
+<apex:page docType="html-5.0" applyBodyTag="false" showHeader="false" lightningStylesheets="true" sidebar="false" applyHtmlTag="false">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+
+    <head>
+        <apex:slds />
+    </head>
+
+    <body class="slds-scope">
+        <div class="slds-page-header">
+            <div class="slds-page-header__row">
+                <div class="slds-page-header__col-title">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+
+                            <span class="slds-icon_container slds-icon-standard-custom" title="custom">
+                                <svg class="slds-icon slds-page-header__icon" aria-hidden="true">
+                                    <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/standard-sprite/svg/symbols.svg#custom')}" />
+                                </svg>
+                                <span class="slds-assistive-text">Configurable Button Setup</span>
+                            </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-page-header__name">
+                                <div class="slds-page-header__name-title">
+                                    <h1>
+                                        <span class="slds-page-header__title slds-truncate" title="Configurable Buttons Setup">Configurable Buttons Setup</span>
+                                    </h1>
+                                </div>
+                            </div>
+                            <p class="slds-page-header__name-meta">Create and manage your configurable buttons below</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_3-of-12">
+                <div class="demo-only" style="width: 320px;">
+                    <nav class="slds-nav-vertical" aria-label="Sub page">
+                        <div class="slds-nav-vertical__section">
+                            <h2 id="entity-header" class="slds-nav-vertical__title slds-text-title_caps">Button Sets</h2>
+                            <ul>
+                                <li class="slds-nav-vertical__item">
+                                    <a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Button Set 1</a>
+                                </li>
+                                <li class="slds-nav-vertical__item">
+                                    <a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="entity-header">Button Set 2</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="slds-nav-vertical__section">
+                            <h2 id="folder-header" class="slds-nav-vertical__title slds-text-title_caps">Buttons</h2>
+                            <ul>
+                                <li class="slds-nav-vertical__item">
+                                    <a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="folder-header">Button 1</a>
+                                </li>
+                                <li class="slds-nav-vertical__item">
+                                    <a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="folder-header">Button 2</a>
+                                </li>
+                                <li class="slds-nav-vertical__item">
+                                    <a href="javascript:void(0);" class="slds-nav-vertical__action" aria-describedby="folder-header">Button 3</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="slds-col slds-size_9-of-12">
+                <h2>Create a new button</h2>
+                <div style="width: 24rem;">
+                    <a href="javascript:void(0);" class="slds-box slds-box_link slds-box_x-small slds-media">
+                        <div class="slds-media__figure slds-media__figure_fixed-width slds-align_absolute-center slds-m-left_xx-small">
+                            <span class="slds-icon_container slds-icon-utility-open">
+                                <svg class="slds-icon slds-icon-text-default" aria-hidden="true">
+                                        <use xlink:href="{!URLFOR($Asset.SLDS, '/assets/icons/utility-sprite/svg/symbols.svg#open')}" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="slds-media__body slds-border_left slds-p-around_small">
+                            <h2 class="slds-truncate slds-text-heading_small" title="Share the knowledge">Navigate to a List View</h2>
+                            <p class="slds-m-top_small">Specify an object and list view to navigate to</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </body>
+
+
+    </html>
+</apex:page>

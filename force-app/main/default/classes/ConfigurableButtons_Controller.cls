@@ -15,7 +15,7 @@ public class ConfigurableButtons_Controller {
 
     @AuraEnabled
     public static Configurable_Button__mdt getButtonConfig(String configName){
-        Configurable_Button__mdt thisButton = [select MasterLabel, DeveloperName from Configurable_Button__mdt where DeveloperName = :configName limit 1][0];
+        Configurable_Button__mdt thisButton = [select MasterLabel, DeveloperName, Button_Configuration__c from Configurable_Button__mdt where DeveloperName = :configName limit 1][0];
         
         return thisButton;
         //return new AuraResponse(thisButton.MasterLabel,thisButton.DeveloperName);

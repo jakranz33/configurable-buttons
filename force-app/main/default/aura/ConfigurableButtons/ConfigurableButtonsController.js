@@ -25,5 +25,21 @@
         });
 
         $A.enqueueAction(action);
+    },
+    button_01_click : function(component, event, helper) {
+        var navService = component.find("navService");
+        var navAttributes = '' + component.get("v.button01_mdt").Button_Configuration__c.toString();
+        
+        console.log(navAttributes);
+        try {
+            var pageRef = JSON.parse(navAttributes);
+        } catch(e) {
+            alert(e);
+        }
+        
+
+        console.log(pageRef);
+        event.preventDefault();
+        navService.navigate(pageRef);
     }
 })

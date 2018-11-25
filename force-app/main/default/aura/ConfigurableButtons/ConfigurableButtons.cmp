@@ -2,13 +2,15 @@
     <aura:attribute name="button01_mdt" type="Map" />
     <aura:attribute name="button01_mdt_name" type="string" />
 
+    <lightning:navigation aura:id="navService"/>
+
     <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
 
     <article class="slds-card">
         <div class="slds-card__header slds-grid">
             <lightning:buttonGroup>
                 <aura:if isTrue="{!not(empty(v.button01_mdt))}">
-                    <lightning:button aura:id="button_01" label="{!button01_mdt_name}" />
+                    <lightning:button aura:id="button_01" label="{#v.button01_mdt.MasterLabel}" onclick="{!c.button_01_click}" />
                 </aura:if>
             </lightning:buttonGroup>
         </div>
